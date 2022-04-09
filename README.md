@@ -1,5 +1,7 @@
 # amsdos hacks
 
+Python utilities used to fix the games for [clean-cpc-db](https://archive.org/details/amstrad-cpc-clean-db). Explanation and usage also [in Spanish on youtube](youtu.be/qNPGfHlZm5g).
+
 ## amsdos_length_hack (deprecated)
 
 The idea is to be able to add machine code to a basic amsdos file. Our extra machine-code data is:

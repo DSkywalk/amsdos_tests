@@ -1,6 +1,6 @@
 # amsdos hacks
 
-Python utilities used to fix the games for [clean-cpc-db](https://archive.org/details/amstrad-cpc-clean-db). Explanation and usage also [in Spanish on youtube](youtu.be/qNPGfHlZm5g).
+Python utilities used to fix the games for [clean-cpc-db](https://archive.org/details/amstrad-cpc-clean-db). Explanation and usage also [in Spanish on youtube](https://youtu.be/qNPGfHlZm5g).
 
 ## amsdos_length_hack (deprecated)
 

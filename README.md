@@ -1,4 +1,6 @@
-# amsdos_tests
+# amsdos hacks
+
+## amsdos_length_hack (deprecated)
 
 The idea is to be able to add machine code to a basic amsdos file. Our extra machine-code data is:
 
@@ -21,3 +23,36 @@ Finally add BAS binary using iDSK:
 ![imagen](https://user-images.githubusercontent.com/560310/161133754-03d2d532-25ae-4bb1-8339-ccb3ed960f69.png)
 
 voila!
+
+## amsdos_append_hack
+
+The idea is the same that length_hack, to be able to add machine code to a basic amsdos file. But has a better result:
+
+Params
+* source-bas-path: Original binary BASIC file to append the extra binary.
+* source-bin-path: New binary machine code to be append.
+* hex-address-append: The position in source-bas where the source-binary will be attached (into BASIC).
+* hex-token-exe: If your BASIC contains a "CALL &FEA5" it will substitute that memory address (0xFEA5) with the one you specify here. If not found, it does nothing.
+* out-file: Name of the destination file generated.
+
+```
+example:
+$ ./amsdos_append_hack.py LOADER.BAS FIXEDCRACK.BIN 0x50b 0x0170 NEWLOADER.BAS
+```
+
+## amsdos_fix_checksum
+
+Recalculates the checksum signature of the AMSDOS header.
+
+Params:
+* source-bas-path: Original binary BASIC file to fix checksum.
+* dest-bas-path: Name of the destination file generated.
+
+```
+example:
+$ ./amsdos_fix_checksum.py LOADER.BAS FIXLOADER.BAS
+```
+
+
+
+
